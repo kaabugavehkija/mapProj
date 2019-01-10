@@ -1,0 +1,54 @@
+body {
+			font-family: "Helvetica Neue", sans-serif;
+			font-weight: 300;
+		}
+	
+#map {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 1080px;
+  height: 550px;
+  opacity: 0.8;
+}
+    
+#world {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 1080px;
+  height: 550px;
+  outline: 1px solid #aaa;
+}
+
+#cont{
+  position: absolute;
+  top: 400px;
+  left: 40px;
+}
+#myCanvas{
+  position: absolute;
+  top: 400px;
+  left: 40px;
+}
+.city {
+  position: absolute;
+  background: #d60;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* start of answer */
+.city_hover {
+  position: absolute;
+  background: #380606;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%; 
+  }
+/* end of answer */
+
+.nomap{
+  display: none;
+}
