@@ -46,7 +46,6 @@ for (var i = 0; i < entries.length; ++i) {
 
   city.addEventListener('mouseenter',function(){
     this.classList.add('city_hover');
-	//var dia = drawDiagramFrame(ctx, 150, 100, 150, 400, "line diagram");
 	drawDiagramFrame(ctx, 50, 50, 250, 400, "line diagram");
   });
 
