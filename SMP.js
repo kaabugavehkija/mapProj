@@ -1,5 +1,5 @@
 //Data as JavaScript object
-var d = 
+var graph_data = 
 	{
 	   "type": "FeatureCollection",
 	   "features": [

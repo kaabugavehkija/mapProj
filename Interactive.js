@@ -1,14 +1,14 @@
 var world = document.getElementById('world');
 
 var scale = 3;
-var entries = d.features;
+var entries = graph_data.features;
 
 // Checkbox
 var check = document.getElementById('mapCheck');
 var map = document.getElementById('map');
 
-var canvas = document.getElementById('myCanvas');
-var ctx = canvas.getContext('2d');
+//var canvas = document.getElementById('myCanvas');
+//var ctx = canvas.getContext('2d');
 
 map.style.display='none'
 check.addEventListener( 'change', function() {
@@ -44,15 +44,20 @@ for (var i = 0; i < entries.length; ++i) {
   // Add cities to the world div
   world.appendChild(city); 
 
-  city.addEventListener('mouseenter',function(){
+  city.addEventListener('click',function(){
     this.classList.add('city_hover');
+	var myWindow = window.open(document.createElement("CANVAS"));
+	//var x = document.createElement("CANVAS");
+	var ctx = myWindow.getContext('2d');
 	drawDiagramFrame(ctx, 50, 50, 250, 400, "line diagram");
+	document.body.appendChild(x);
+	
   });
 
-  city.addEventListener('mouseleave',function(){
+/*   city.addEventListener('click',function(){
     this.classList.remove('city_hover');
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-  });
+  }); */
 
 function drawDiagramFrame(ctx, offsetX, offsetY, height, width, title) {
 		var canvas = document.getElementById('myCanvas');
