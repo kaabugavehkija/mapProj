@@ -19,7 +19,6 @@ check.addEventListener( 'change', function() {
   }
 });
 
-
 for (var i = 0; i < entries.length; ++i) {
   // Extract names and coordinates from the JavaScript Object
   var entry = entries[i];
@@ -46,11 +45,24 @@ for (var i = 0; i < entries.length; ++i) {
 
   city.addEventListener('click',function(){
     this.classList.add('city_hover');
-	var myWindow = window.open(document.createElement("CANVAS"));
-	//var x = document.createElement("CANVAS");
-	var ctx = myWindow.getContext('2d');
-	drawDiagramFrame(ctx, 50, 50, 250, 400, "line diagram");
-	document.body.appendChild(x);
+    var myWindow = window.open();
+    var d = document.createElement("div");
+    d.setAttribute("id", "myDiv");
+    p = document.createElement("p");
+    p.setAttribute("id", "myP");
+    d.appendChild(p);
+    var text = document.createTextNode("TEKST");
+    p.appendChild(text);
+    myWindow.document.body.appendChild(d);
+
+
+    //var can = document.createElement("CANVAS");
+    //can.setAttribute("id", "canvasAken");
+    //myWindow.document.body.appendChild(can);
+    //canvas2 = myWindow.document.getElementById('canvasAken');
+	//var ctx = canvas2.getContext('2d');
+	//drawDiagramFrame(ctx, 50, 50, 250, 400, "line diagram");
+	//document.body.appendChild(x);
 	
   });
 
